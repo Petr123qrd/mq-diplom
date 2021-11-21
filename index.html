@@ -13,6 +13,9 @@
       <a href="#0" class="logo">
         <img src="https://netology-code.github.io/html-2-diploma/sources/images/noemi-logo.svg" alt="Новостной блог">
       </a>
+      <div class="menu-burger-header">
+        <span></span>
+      </div>
       <ul class="menu">
         <li class="menu-list-item">
           <a href="#0" class="menu-link">Главная</a>
@@ -41,26 +44,59 @@
     <div class="actual-news">
       <article class="card-trend1">
         <div class="card-new">
-          <h3><a href="#0" class="actual-news-title">lifestyle interior</a></h3>
-          <p><a href="#0" class="actual-content">сейчас в тренде: сад на подоконнике</a></p>
+          <ul class="actual-news-title">
+            <li class="content-block-list">
+              <a href="#0" class="tag-link">lifestyle</a>
+            </li>
+            <li class="content-block-list">
+              <a href="#0" class="tag-link">interior</a>
+            </li>
+          </ul>
+          <h3 class="news-actual-content">
+            <a href="#0" class="actual-content">сейчас в тренде: сад на подоконнике</a>
+          </h3>
         </div>
       </article>
       <article class="card-trend2">
         <div class="card-new">
-          <h3><a href="#0" class="actual-news-title">food</a></h3>
-          <p><a href="#0" class="actual-content">сыры на красивых картинках из интернета: какие они на вкус?</a></p>
+          <ul class="actual-news-title">
+            <li class="content-block-list">
+              <a href="#0" class="tag-link">food</a>
+            </li>
+          </ul>
+          <h3 class="news-actual-content">
+            <a href="#0" class="actual-content">сыры на красивых картинках из интернета: какие они на вкус?</a>
+          </h3>
         </div>
       </article>
       <article class="card-trend3">
         <div class="card-new">
-          <h3><a href="#0" class="actual-news-title">lifestyle travel</a></h3>
-          <p><a href="#0" class="actual-content">собираемся в первый поход в горы</a></p>
+          <ul class="actual-news-title">
+            <li class="content-block-list">
+              <a href="#0" class="tag-link">lifestyle</a>
+            </li>
+            <li class="content-block-list">
+              <a href="#0" class="tag-link">travel</a>
+            </li>
+          </ul>
+          <h3 class="news-actual-content">
+            <a href="#0" class="actual-content">собираемся в первый поход в горы</a>
+          </h3>
         </div>
       </article>
       <article class="card-trend4">
         <div class="card-new">
-          <h3><a href="#0" class="actual-news-title">food health</a></h3>
-          <p><a href="#0" class="actual-content">сейчас в тренде: сколько витамина с в лимонах?</a></p>
+          <ul class="actual-news-title">
+            <li class="content-block-list">
+              <a href="#0" class="tag-link">food</a>
+            </li>
+            <li class="content-block-list">
+              <a href="#0" class="tag-link">health</a>
+            </li>
+          </ul>
+          <h3 class="news-actual-content">
+            <a href="#0" class="actual-content">сейчас в тренде: сколько витамина с в лимонах?</a>
+          </h3>
         </div>
       </article>
     </div>
@@ -351,8 +387,8 @@
       <div class="conteiner-products">
         <article class="conteiner-product-pillow">
           <picture class="product-pillow">
-            <sourse srcset="https://raw.githubusercontent.com/netology-code/mq-diploma/master/sources/img/shop-item-tablet1.jpg" media="(min-width: 641px) and (max-width: 1199px)">
-              <sourse srcsen="https://raw.githubusercontent.com/netology-code/mq-diploma/master/sources/img/shop-item-mobile1.jpg" media="(max-width: 640px)">
+            <sourse srcset="https://raw.githubusercontent.com/netology-code/mq-diploma/master/sources/img/shop-item-tablet1.jpg" media="(min-width: 769px) and (max-width: 1200px)">
+              <sourse srcsen="https://raw.githubusercontent.com/netology-code/mq-diploma/master/sources/img/shop-item-mobile1.jpg" media="(max-width: 768px)">
                 <img src="https://raw.githubusercontent.com/netology-code/mq-diploma/master/sources/img/shop-item-desk1.jpg" alt="изображение подушек с принтами">
           </picture>
         </article>
@@ -360,19 +396,23 @@
           <div class="pillow-description">
             <h3 class="title-description">подушки на диван</h3>
             <p class="description-contents">Набор из двух подушек с модными принтами. Видео о создании <a href="#0" class="description-content"> здесь.</a></p>
-            <div class="price-pillow">
-              <p class="old-price">1000₽</p>
-              <p class="new-price">800₽</p>
+
+            <div class="price-store">
+              <div class="price-pillow">
+                <p class="old-price">1000₽</p>
+                <p class="new-price">800₽</p>
+              </div>
+              <button class="to-the-store" type="button" name="кнопка перехода в магазин">в магазин </button>
             </div>
-            <button class="to-the-store" type="button" name="кнопка перехода в магазин">в магазин </button>
+
           </div>
         </article>
       </div>
       <div class="conteiner-products">
         <article class="conteiner-product-doll">
           <picture class="product-doll">
-            <sourse srcset="https://raw.githubusercontent.com/netology-code/mq-diploma/master/sources/img/shop-item-tablet2.jpg" media="(min-width: 641px) and (max-width: 1199px)">
-              <sourse srcsen="https://raw.githubusercontent.com/netology-code/mq-diploma/master/sources/img/shop-item-mobile2.jpg" media="(max-width: 640px)">
+            <sourse srcset="https://raw.githubusercontent.com/netology-code/mq-diploma/master/sources/img/shop-item-tablet2.jpg" media="(min-width: 769px) and (max-width: 1200px)">
+              <sourse srcsen="https://raw.githubusercontent.com/netology-code/mq-diploma/master/sources/img/shop-item-mobile2.jpg" media="(max-width: 768px)">
 
                 <img src="https://raw.githubusercontent.com/netology-code/mq-diploma/master/sources/img/shop-item-desk2.jpg" alt="изображение куклы">
           </picture>
@@ -381,18 +421,22 @@
           <div class="pillow-description">
             <h3 class="title-description">кукла «зайчик»</h3>
             <p class="description-contents">Интересная рукодельная кукла «Зайчик», созданию которой посвящена <a href="#0" class="description-content">веселая серия постов </a>в блоге и несколько подкастов</p>
-            <div class="price-pillow">
-              <p class="new-price">3500₽</p>
+
+            <div class="price-store">
+              <div class="price-pillow">
+                <p class="new-price">3500₽</p>
+              </div>
+              <button class="to-the-store" type="button" name="кнопка перехода в магазин">в магазин </button>
             </div>
-            <button class="to-the-store" type="button" name="кнопка перехода в магазин">в магазин </button>
+
           </div>
         </article>
       </div>
       <div class="conteiner-products">
         <article class="conteiner-product-frame">
           <picture class="product-frame">
-            <sourse srcset="https://raw.githubusercontent.com/netology-code/mq-diploma/master/sources/img/shop-item-tablet3.jpg" media="(min-width: 641px) and (max-width: 1199px)">
-              <sourse srcsen="https://raw.githubusercontent.com/netology-code/mq-diploma/master/sources/img/shop-item-mobile3.jpg" media="(max-width: 640px)">
+            <sourse srcset="https://raw.githubusercontent.com/netology-code/mq-diploma/master/sources/img/shop-item-tablet3.jpg" media="(min-width: 769px) and (max-width: 1200px)">
+              <sourse srcsen="https://raw.githubusercontent.com/netology-code/mq-diploma/master/sources/img/shop-item-mobile3.jpg" media="(max-width: 768px)">
                 <img src="https://raw.githubusercontent.com/netology-code/mq-diploma/master/sources/img/shop-item-desk3.jpg" alt="изображение шестиугольной рамки">
           </picture>
         </article>
@@ -400,11 +444,15 @@
           <div class="pillow-description">
             <h3 class="title-description">шестиугольная рамка</h3>
             <p class="description-contents">Необычная рамка для украшения дома из видео<a href="#0" class="description-content"> «Как сделать рамку из подручных средств за 30 минут»</a></p>
-            <div class="price-pillow">
-              <p class="old-price">500₽</p>
-              <p class="new-price">400₽</p>
+
+            <div class="price-store">
+              <div class="price-pillow">
+                <p class="old-price">500₽</p>
+                <p class="new-price">400₽</p>
+              </div>
+              <button class="to-the-store" type="button" name="кнопка перехода в магазин">в магазин </button>
             </div>
-            <button class="to-the-store" type="button" name="кнопка перехода в магазин">в магазин </button>
+
           </div>
         </article>
       </div>
@@ -446,5 +494,47 @@
       </a>
     </div>
   </footer>
+  <div class="popup_hidden">
+    <div class="popup-container">
+      <button class="button-close" type="button"></button>
+      <div class="popup-contant">
+        <form class="popup-form">
+          <header class="popup-header">
+            <h3 class="title-popup">ваш фидбек</h3>
+          </header>
+          <div class="form-group">
+            <label class="popup-choice">
+              <span class="label-text">Как часто Вы заходите на сайт?</span>
+              <select class="select">
+                <option value="everyday" selected>Почти каждый день</option>
+                <option value="once">Раз в неделю</option>
+                <option value="first">Я здесь впервые</option>
+              </select>
+            </label>
+          </div>
+          <div class="form-group form-radio-group">
+            <span class="label-text">Вы подписаны на e-mail рассылку?</span>
+            <label class="radio-group">
+              <input type="radio" name="radio-group" class="radio">
+              <span class="radio-group-text">Да</span>
+            </label>
+            <label class="radio-group">
+              <input type="radio" name="radio-group" class="radio">
+              <span class="radio-group-text">Нет</span>
+            </label>
+          </div>
+          <div class="form-group">
+            <label class="field-group">
+              <span class="label-text">Расскажите, какой контент Вы бы хотели видеть на нашем сайте?</span>
+              <textarea class="field-textarea" placeholder="Может, больше рецептов?" required></textarea>
+            </label>
+          </div>
+          <div class="for-group">
+            <button class="button" type="button">Отправить</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

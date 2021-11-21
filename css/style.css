@@ -40,7 +40,7 @@
   z-index: -1;
 }
 
-@media (min-width: 641px) and (max-width: 1200px) {
+@media (min-width: 769px) and (max-width: 1200px) {
   .header {
     background-image: url("https://raw.githubusercontent.com/netology-code/mq-diploma/master/sources/img/banner-bg-tablet.jpg");
     background-color: #000000;
@@ -64,7 +64,7 @@
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .header {
     background-image: url("https://raw.githubusercontent.com/netology-code/mq-diploma/master/sources/img/banner-mobile.jpg");
     background-color: #000000;
@@ -91,14 +91,15 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
 }
 
 .logo {
   display: block;
-  margin-left: 245px;
   margin-top: 35px;
 }
-@media (min-width: 641px) and (max-width: 1200px) {
+@media (min-width: 769px) and (max-width: 1200px) {
   .logo {
     display: block;
     margin-left: 35px;
@@ -110,11 +111,10 @@
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .logo {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
     margin-top: 237px;
   }
   .logo img {
@@ -130,12 +130,74 @@
 .menu {
   list-style-type: none;
 }
-@media (min-width: 641px) and (max-width: 1200px) {
+@media (min-width: 769px) and (max-width: 1200px) {
+  .menu-burger-header {
+    position: relative;
+    width: 25px;
+    height: 20px;
+    display: block;
+    margin-right: 35px;
+    margin-top: 53px;
+  }
+  .menu-burger-header span,
+  .menu-burger-header:after,
+  .menu-burger-header:before {
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    background: #ffffff;
+    margin: 0 auto;
+  }
+  .menu-burger-header span {
+    top: 20px;
+  }
+  .menu-burger-header:after,
+  .menu-burger-header:before {
+    content: "";
+  }
+  .menu-burger-header:after {
+    bottom: 5px;
+  }
+  .menu-burger-header:before {
+    top: 5px;
+  }
+
   .menu {
     display: none;
   }
 }
-@media (max-width: 640px) {
+@media (max-width: 768px) {
+  .menu-burger-header {
+    position: relative;
+    width: 25px;
+    height: 20px;
+    display: block;
+    margin-right: 15px;
+    margin-bottom: 184px;
+    
+  }
+  .menu-burger-header span,
+  .menu-burger-header:after,
+  .menu-burger-header:before {
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    background: #ffffff;
+    margin: 0 auto;
+  }
+  .menu-burger-header span {
+    top: 20px;
+  }
+  .menu-burger-header:after,
+  .menu-burger-header:before {
+    content: "";
+  }
+  .menu-burger-header:after {
+    bottom: 5px;
+  }
+  .menu-burger-header:before {
+    top: 5px;
+  }
   .menu {
     display: none;
   }
@@ -144,10 +206,6 @@
   display: inline-block;
   padding-right: 35px;
   margin-top: 45px;
-}
-
-.menu-list-item:nth-child(6n) {
-  margin-right: 130px;
 }
 
 .menu-link {
@@ -164,7 +222,7 @@
   text-transform: uppercase;
   margin-left: auto;
   margin-right: auto;
-  width: 650px;
+  max-width: 650px;
   margin-top: 135px;
   padding: 5px 5px 145px 5px;
   text-align: center;
@@ -176,13 +234,13 @@
   line-height: 1.7;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .title {
     display: block;
     text-transform: uppercase;
     margin-left: auto;
     margin-right: auto;
-    width: 290px;
+    max-width: 280px;
     margin-top: 43px;
     padding: 5px 5px 145px 5px;
     text-align: center;
@@ -235,6 +293,9 @@
   font-family: sans-bold;
 }
 
+.news-tag-items:nth-child(2n) {
+  margin-left: 10px;
+}
 .news-title {
   margin-top: 10px;
   line-height: 1.2;
@@ -284,7 +345,7 @@
   font-weight: 500;
   line-height: 1.5;
 }
-@media (min-width: 641px) and (max-width: 1200px) {
+@media (min-width: 769px) and (max-width: 1200px) {
   .contents {
     display: flex;
     justify-content: center;
@@ -295,7 +356,8 @@
   .news-blog {
     display: flex;
     flex-wrap: wrap;
-    width: 390px;
+    width: 100%;
+    max-width: 395px;
   }
 
   .posts {
@@ -396,28 +458,30 @@
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .contents {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     flex-wrap: wrap;
+    margin: auto;
     width: 100%;
+    max-width: 330px;
     margin-top: 60px;
   }
 
   .news-blog {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     flex-wrap: wrap;
-    width: 330px;
+    width: 100%;
+    max-width: 330px;
   }
 
   .posts {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     flex-wrap: wrap;
     width: 330px;
-    padding: 0;
   }
   .news-preview {
     display: flex;
@@ -514,7 +578,7 @@
 
   .aside {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     flex-wrap: wrap;
     width: 100%;
   }
@@ -799,9 +863,10 @@
   background-color: #f4f7f6;
   margin-bottom: 74px;
   margin-top: 65px;
+  padding: 32px 27px;
 }
 
-@media (min-width: 641px) and (max-width: 1200px) {
+@media (min-width: 769px) and (max-width: 1200px) {
   .footer {
     display: flex;
     justify-content: center;
@@ -812,10 +877,11 @@
     width: 697px;
     background-color: #f4f7f6;
     margin-bottom: 49px;
+    padding: 32px 27px;
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .footer {
     display: flex;
     justify-content: center;
@@ -826,6 +892,7 @@
     width: 329px;
     background-color: #f4f7f6;
     margin-bottom: 49px;
+    padding: 32px 27px;
   }
 }
 
@@ -843,7 +910,7 @@
   display: block;
   width: 25px;
   min-height: 25px;
-  padding: 32px 27px;
+  margin: 0 15px;
   background-repeat: no-repeat;
   background-size: 20px;
   background-position: center;
@@ -884,7 +951,7 @@
   font-size: 11px;
   font-family: sans-bold;
 }
-@media (min-width: 641px) and (max-width: 1200px) {
+@media (min-width: 769px) and (max-width: 1200px) {
   .copyright {
     width: 220px;
     margin-left: 245px;
@@ -894,7 +961,7 @@
     font-family: sans-bold;
   }
 }
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .copyright {
     width: 220px;
     margin-left: 60px;
@@ -967,14 +1034,16 @@
 }
 
 .actual-news-title {
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 14px;
-  color: #b59f5b;
-  font-weight: 700;
-  font-family: sans-bold;
-  padding-right: 18px;
+  display: flex;
+  box-sizing: border-box;
+  list-style-type: none;
+  margin-bottom: 12px;
 }
+
+.content-block-list:nth-child(2n) {
+  margin-left: 10px;
+}
+
 .actual-content {
   text-decoration: none;
   text-transform: uppercase;
@@ -1070,7 +1139,7 @@
   flex-wrap: wrap;
 }
 
-@media (min-width: 641px) and (max-width: 1200px) {
+@media (min-width: 769px) and (max-width: 1200px) {
   .card-trend1 {
     display: flex;
     justify-content: center;
@@ -1185,7 +1254,7 @@
     width: 100%;
   }
 }
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .card-trend1 {
     display: flex;
     justify-content: center;
@@ -1356,49 +1425,48 @@
   margin-top: -30px;
 }
 
-.pillow-description {
-  display: flex;
-  flex-wrap: wrap;
-}
-
 .title-description {
   font-family: sans-bold;
   font-size: 20px;
   text-transform: uppercase;
   font-weight: 900;
-  margin-top: 40px;
-  margin-left: 20px;
+  padding-top: 40px;
+  padding-left: 20px;
 }
 .description-contents {
-  margin-top: 18px;
-  margin-left: 20px;
+  padding-top: 18px;
+  padding-left: 20px;
   font-size: 15px;
-  font-family: Open Sans;
+  font-family: sans-regular;
   color: #0f0d0e;
   width: 300px;
-  font-weight: 500;
 }
 .description-content {
   text-decoration: none;
-  font-family: Open Sans;
+  font-family: sans-regular;
   font-size: 15px;
   color: #cabb92;
 }
+.price-store {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .price-pillow {
-  margin-left: 20px;
-  margin-top: 35px;
+  padding-left: 20px;
+  padding-top: 35px;
   line-height: 1;
 }
 .old-price {
   font-size: 14px;
-  font-family: Open Sans;
+  font-family: sans-bold;
   font-weight: 900;
   text-decoration: line-through;
 }
 
 .new-price {
   font-size: 20px;
-  font-family: Open Sans;
+  font-family: sans-bold;
   font-weight: 900;
 }
 
@@ -1430,19 +1498,20 @@
   min-height: 205px;
 }
 
-@media (min-width: 641px) and (max-width: 1200px) {
+@media (min-width: 769px) and (max-width: 1200px) {
   .products {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    margin: auto;
     width: 100%;
+    max-width: 750px;
   }
   .conteiner-product {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     max-width: 750px;
-    margin-left: 10px;
   }
   .conteiner-products {
     display: flex;
@@ -1466,49 +1535,48 @@
     margin-top: -40px;
   }
 
-  .pillow-description {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
   .title-description {
     font-family: sans-bold;
     font-size: 20px;
     text-transform: uppercase;
     font-weight: 900;
-    margin-top: 40px;
-    margin-left: 20px;
+    padding-top: 40px;
+    padding-left: 20px;
   }
   .description-contents {
-    margin-top: 18px;
-    margin-left: 20px;
+    padding-top: 18px;
+    padding-left: 20px;
     font-size: 15px;
-    font-family: Open Sans;
+    font-family: sans-regular;
     color: #0f0d0e;
     width: 300px;
-    font-weight: 500;
   }
   .description-content {
     text-decoration: none;
-    font-family: Open Sans;
+    font-family: sans-regular;
     font-size: 15px;
     color: #cabb92;
   }
+  .price-store {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
   .price-pillow {
-    margin-left: 20px;
-    margin-top: 35px;
+    padding-left: 20px;
+    padding-top: 35px;
     line-height: 1;
   }
   .old-price {
     font-size: 14px;
-    font-family: Open Sans;
+    font-family: sans-bold;
     font-weight: 900;
     text-decoration: line-through;
   }
 
   .new-price {
     font-size: 20px;
-    font-family: Open Sans;
+    font-family: sans-bold;
     font-weight: 900;
   }
 
@@ -1540,7 +1608,7 @@
     margin-top: 30px;
   }
 }
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .products {
     display: flex;
     justify-content: center;
@@ -1574,49 +1642,48 @@
     margin-top: -40px;
   }
 
-  .pillow-description {
+  .title-description {
+    font-family: sans-bold;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 900;
+    padding-top: 40px;
+    padding-left: 20px;
+  }
+  .description-contents {
+    padding-top: 18px;
+    padding-left: 20px;
+    font-size: 15px;
+    font-family: sans-regular;
+    color: #0f0d0e;
+    width: 300px;
+  }
+  .description-content {
+    text-decoration: none;
+    font-family: sans-regular;
+    font-size: 15px;
+    color: #cabb92;
+  }
+  .price-store {
     display: flex;
     flex-wrap: wrap;
   }
 
-  .title-description {
-    font-family: sans-bold;
-    font-size: 17px;
-    text-transform: uppercase;
-    font-weight: 900;
-    margin-top: 40px;
-    margin-left: 20px;
-  }
-  .description-contents {
-    margin-top: 18px;
-    margin-left: 20px;
-    font-size: 15px;
-    font-family: Open Sans;
-    color: #0f0d0e;
-    width: 300px;
-    font-weight: 500;
-  }
-  .description-content {
-    text-decoration: none;
-    font-family: Open Sans;
-    font-size: 15px;
-    color: #cabb92;
-  }
   .price-pillow {
-    margin-left: 20px;
-    margin-top: 35px;
+    padding-left: 20px;
+    padding-top: 35px;
     line-height: 1;
   }
   .old-price {
     font-size: 14px;
-    font-family: Open Sans;
+    font-family: sans-bold;
     font-weight: 900;
     text-decoration: line-through;
   }
 
   .new-price {
     font-size: 20px;
-    font-family: Open Sans;
+    font-family: sans-bold;
     font-weight: 900;
   }
 
@@ -1648,4 +1715,168 @@
     min-height: 280px;
     margin-top: 30px;
   }
+}
+
+.popup-container{
+margin-top: auto;
+margin-bottom: auto;
+}
+.title-popup {
+text-transform: uppercase;
+font-size: 18px;
+font-family: sans-bold;
+text-align: center;
+}
+
+.title-popup::after {
+content: "";
+display: block;
+position: relative;
+margin-left: auto;
+margin-right: auto;
+margin-top: 10px;
+margin-bottom: 25px;
+width: 66px;
+height: 3px;
+background: #e1d9bd;
+}
+.popup_hidden {
+display: flex;
+display: none;
+justify-content: center;
+position: fixed;
+z-index: 9999;
+top:0;
+right:0;
+bottom:0;
+left:0;
+}
+.popup_hidden:after {
+content: "";
+position: absolute;
+top: 0;
+right: 0;
+left: 0;
+bottom: 0;
+background-color: #000000;
+opacity: 0.7;
+z-index: -1;
+}
+
+.popup-contant {
+width: 390px;
+height: auto;
+background-color: #ffffff;
+padding: 35px 35px;
+font-family: sans-regular;
+font-size: 15px;
+line-height: 1.5;
+}
+
+.form-group {
+margin-bottom: 20px;
+}
+
+.label-text {
+width: 100%;
+}
+
+.select {
+display: inline-block;
+box-sizing: border-box;
+margin-top: 10px;
+border: none;
+height: 48px;
+width: 100%;
+appearance: none;
+background-color: #f4f7f6;
+background-image: url("https://raw.githubusercontent.com/netology-code/mq-diploma/1ad0703d75efaafe9fb70e8a32f7ecf69bfb40f4/sources/svg/form-arrows.svg");
+background-repeat: no-repeat;
+background-size: 10px;
+background-position: right 10px center;
+padding-left: 18px;
+padding-right: 18px;
+font-size: 15px;
+color: #989898;
+}
+
+.form-radio-group{
+display: flex;
+flex-wrap: wrap;
+}
+
+.radio-group {
+margin-right: 10px;
+margin-top: 5px;
+}
+
+
+.radio-group>input {
+position: absolute;
+z-index: -1;
+opacity: 0;
+}
+
+
+.radio-group>span {
+display: inline-flex;
+align-items: center;
+}
+
+.radio-group>span::before {
+content: '';
+display: inline-block;
+width: 1em;
+height: 1em;
+border-radius: 50%;
+margin-right: 0.5em;
+background-image: url("https://raw.githubusercontent.com/netology-code/mq-diploma/1ad0703d75efaafe9fb70e8a32f7ecf69bfb40f4/sources/svg/form-empty-circle.svg");
+background-repeat: no-repeat;
+background-position: center center;
+background-size: 100%;
+}
+
+.radio-group>input:checked+span::before {
+background-image: url("https://raw.githubusercontent.com/netology-code/mq-diploma/1ad0703d75efaafe9fb70e8a32f7ecf69bfb40f4/sources/svg/form-circle.svg");
+}
+
+.field-textarea {
+margin-top: 10px;
+width: 100%;
+height: 135px;
+resize: none;
+outline: none;
+border: none;
+background-color:#f4f7f6;
+padding-left: 18px;
+padding-right: 18px;
+font-size: 15px;
+color: #989898;
+font-family: sans-regular;
+line-height: 1.5;
+padding-top: 25px;
+}
+
+.button {
+width: 100%;
+height: 45px;
+border: none;
+background-color: #b59f5b;
+text-transform: uppercase;
+font-weight: 700;
+font-size: 16px;
+color: #ffffff;
+font-family: sans-bold;
+cursor: pointer;
+}
+
+.button-close{
+background-image: url("https://raw.githubusercontent.com/netology-code/mq-diploma/1ad0703d75efaafe9fb70e8a32f7ecf69bfb40f4/sources/svg/form-x.svg");
+background-repeat: no-repeat;
+background-color: transparent;
+margin-left: 95%;
+border:none;
+width: 15px;
+height: 20px;
+cursor: pointer;
 }

@@ -18,13 +18,21 @@
   font-weight: 400;
 }
 
+.container {
+  margin: auto;
+  max-width: 1200px;
+}
+
 .header {
-  background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/banner-bg.jpg");
+  padding-top: 15px;
+  padding-bottom: 140px;
+  background-image: url(../images/banner-bg.jpg);
   background-color: #000000;
+  width: 100%;
   background-size: cover;
-  position: relative;
   background-repeat: no-repeat;
   background-position: center center;
+  position: relative;
   z-index: 0;
 }
 
@@ -32,183 +40,83 @@
   content: "";
   position: absolute;
   top: 0;
-  left: 0;
   right: 0;
+  left: 0;
   bottom: 0;
   background-color: #000000;
-  opacity: 0.5;
+  opacity: 0.7;
   z-index: -1;
 }
 
-@media (min-width: 769px) and (max-width: 1200px) {
-  .header {
-    background-image: url("https://raw.githubusercontent.com/netology-code/mq-diploma/master/sources/img/banner-bg-tablet.jpg");
-    background-color: #000000;
-    background-size: cover;
-    position: relative;
-    background-repeat: no-repeat;
-    background-position: center center;
-    z-index: 0;
-  }
-
-  .header::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #000000;
-    opacity: 0.5;
-    z-index: -1;
-  }
-}
-
-@media (max-width: 768px) {
-  .header {
-    background-image: url("https://raw.githubusercontent.com/netology-code/mq-diploma/master/sources/img/banner-mobile.jpg");
-    background-color: #000000;
-    background-size: cover;
-    position: relative;
-    background-repeat: no-repeat;
-    background-position: center center;
-    z-index: 0;
-  }
-
-  .header::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #000000;
-    opacity: 0.5;
-    z-index: -1;
-  }
-}
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: auto;
-}
-
-.logo {
-  display: block;
-  margin-top: 35px;
-}
-@media (min-width: 769px) and (max-width: 1200px) {
-  .logo {
-    display: block;
-    margin-left: 35px;
-    margin-top: 45px;
-  }
-  .logo img {
-    width: 185px;
-    max-width: 100%;
-  }
-}
-
-@media (max-width: 768px) {
-  .logo {
-    display: block;
-    margin: auto;
-    margin-top: 237px;
-  }
-  .logo img {
-    min-width: 272px;
-  }
-}
-
-.logo img {
-  width: 160px;
-  max-width: 100%;
-}
-
 .menu {
+  max-width: 100%;
+  display: flex;
+  justify-content:space-around;
+  margin-top: 20px;
+}
+
+
+.logo-img {
+  width: 180px;
+}
+
+.header-menu {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.menu-button {
+  position: relative; 
+  width: 30px; 
+  height: 31px;
+  display: block;
+  border: none;
+  padding-right: 30px;
+  background-color: transparent;
+  font-size: 25px;
+  cursor: pointer; 
+  margin-right: 35px;
+}
+
+ .menu-button span, .menu-button:after, .menu-button:before {
+  height: 3px;
+  width: 100%;
+  position: absolute;
+  margin-right: 20px ;
+  background-color: #ffffff;
+}
+
+.menu-button span{
+  top: 14px;
+}
+
+.menu-button:after, .menu-button:before {
+  content: "";
+}
+
+.menu-button:after{
+  bottom: 5px;
+}
+
+.menu-button:before{
+  top: 5px;
+}
+
+.menu-list {
+  display: flex;
   list-style-type: none;
 }
-@media (min-width: 769px) and (max-width: 1200px) {
-  .menu-burger-header {
-    position: relative;
-    width: 25px;
-    height: 20px;
-    display: block;
-    margin-right: 35px;
-    margin-top: 53px;
-  }
-  .menu-burger-header span,
-  .menu-burger-header:after,
-  .menu-burger-header:before {
-    height: 3px;
-    width: 100%;
-    position: absolute;
-    background: #ffffff;
-    margin: 0 auto;
-  }
-  .menu-burger-header span {
-    top: 20px;
-  }
-  .menu-burger-header:after,
-  .menu-burger-header:before {
-    content: "";
-  }
-  .menu-burger-header:after {
-    bottom: 5px;
-  }
-  .menu-burger-header:before {
-    top: 5px;
-  }
 
-  .menu {
-    display: none;
-  }
+.menu-list-item:nth-child(n + 2) {
+  margin-left: 35px;
 }
-@media (max-width: 768px) {
-  .menu-burger-header {
-    position: relative;
-    width: 25px;
-    height: 20px;
-    display: block;
-    margin-right: 15px;
-    margin-bottom: 184px;
-  }
-  .menu-burger-header span,
-  .menu-burger-header:after,
-  .menu-burger-header:before {
-    height: 3px;
-    width: 100%;
-    position: absolute;
-    background: #ffffff;
-    margin: 0 auto;
-  }
-  .menu-burger-header span {
-    top: 20px;
-  }
-  .menu-burger-header:after,
-  .menu-burger-header:before {
-    content: "";
-  }
-  .menu-burger-header:after {
-    bottom: 5px;
-  }
-  .menu-burger-header:before {
-    top: 5px;
-  }
-  .menu {
-    display: none;
-  }
+
+.menu-link:hover {
+  text-decoration: underline;
 }
-.menu-list-item {
-  display: inline-block;
-  padding-right: 35px;
-  margin-top: 45px;
-}
+
 
 .menu-link {
-  display: block;
   text-decoration: none;
   color: #ffffff;
   font-size: 13px;
@@ -219,44 +127,132 @@
 .title {
   display: block;
   text-transform: uppercase;
+  max-width: 700px;
+  margin-top: 140px;
   margin-left: auto;
   margin-right: auto;
-  max-width: 650px;
-  margin-top: 135px;
-  padding: 5px 5px 145px 5px;
   text-align: center;
   color: #ffffff;
   font-family: sans-bold;
-  font-size: 40px;
-  font-weight: 900;
-  z-index: 0;
+  font-size: 35px;
   line-height: 1.7;
+  font-weight: 700;
 }
 
-@media (max-width: 768px) {
-  .title {
-    display: block;
-    text-transform: uppercase;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 280px;
-    margin-top: 43px;
-    padding: 5px 5px 145px 5px;
-    text-align: center;
-    color: #ffffff;
-    font-family: sans-bold;
-    font-size: 26px;
-    font-weight: 900;
-    z-index: 0;
-    line-height: 1.7;
-  }
+.actual-new-header {
+  margin-top: 65px;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-family: sans-bold;
+  text-align: center;
+  font-weight: 900;
 }
+
+.actual-new-header::after {
+  content: "";
+  display: block;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+  margin-bottom: 30px;
+  width: 66px;
+  height: 3px;
+  background: #e1d9bd;
+}
+
+.actual-news {
+  width: 100%;
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.trend {
+  background-color: black;
+  position: relative;
+  z-index: 0;
+  display: flex;
+  align-items: flex-end;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.trend::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #000000;
+  opacity: 0.6;
+  z-index: -1;
+}
+
+.trend1 {
+  background-image: url(../images/trend1.jpg);
+}
+
+.trend2 {
+  background-image: url(../images/trend2.jpg);
+}
+
+.trend3 {
+  background-image: url(../images/trend3.jpg);
+}
+
+.trend4 {
+  background-image: url(../images/trend4.jpg);
+}
+
+.card-new {
+  border: 2px solid #b59f5b;
+  padding: 35px;
+  margin: 20px;
+  width: 100%;
+}
+
+.actual-news-title {
+  display: flex;
+  box-sizing: border-box;
+  list-style-type: none;
+}
+
+.content-block-list:nth-child(2n) {
+  padding-left: 10px;
+}
+
+.content-block-list:hover {
+  text-decoration: underline;
+}
+
+.actual-content {
+  font-size: 17px;
+  text-transform: uppercase;
+  font-family: sans-bold;
+  font-weight: 900;
+  margin-top: 10px;
+  color: #ffffff;
+}
+
+.actual-content:hover {
+  color:#b59f5b;
+}
+
+
+
+
 
 .contents {
+  max-width: 1200px;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
-  justify-content: center;
-  width: 100%;
-  margin-top: 60px;
+  justify-content: space-around;
 }
 
 .news-blog {
@@ -266,11 +262,11 @@
 .posts {
   display: flex;
   padding-top: 0;
-  padding-bottom: 60px;
+  margin-bottom: 60px;
 }
 
 .preview-img {
-  max-width: 370px;
+  width: 380px;
 }
 
 .content {
@@ -283,6 +279,10 @@
   list-style-type: none;
 }
 
+.news-tag-items {
+  padding-right: 10px;
+}
+
 .tag-link {
   text-decoration: none;
   text-transform: uppercase;
@@ -292,9 +292,10 @@
   font-family: sans-bold;
 }
 
-.news-tag-items:nth-child(2n) {
-  margin-left: 10px;
+.tag-link:hover {
+ text-decoration: underline;
 }
+
 .news-title {
   margin-top: 10px;
   line-height: 1.2;
@@ -312,8 +313,12 @@
   font-weight: 900;
 }
 
+.news-title-link:hover {
+  color:#b59f5b;
+}
+
 .news-info {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   margin-top: 25px;
 }
 
@@ -337,352 +342,6 @@
   font-size: 13px;
   font-weight: 500;
   line-height: 1.5;
-}
-.news-contents {
-  font-family: sans-regular;
-  font-size: 13px;
-  font-weight: 500;
-  line-height: 1.5;
-}
-@media (min-width: 769px) and (max-width: 1200px) {
-  .contents {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-top: 60px;
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-
-  .news-blog {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 395px;
-    max-width: 390px;
-  }
-
-  .posts {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0;
-  }
-
-  .preview-img {
-    max-width: 390px;
-  }
-
-  .news-preview {
-    display: flex;
-    justify-content: flex-start;
-    width: 370px;
-  }
-
-  content {
-    display: flex;
-    width: 390px;
-  }
-  .news-menu {
-    display: flex;
-    box-sizing: border-box;
-    list-style-type: none;
-    margin-top: 10px;
-  }
-
-  .tag-link {
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 12px;
-    color: #b59f5b;
-    font-weight: 700;
-    font-family: sans-bold;
-  }
-
-  .news-title {
-    margin-top: 5px;
-    line-height: 1.2;
-    font-size: 20px;
-    font-family: sans-bold;
-    font-weight: bold;
-  }
-
-  .news-title-link {
-    text-decoration: none;
-    text-transform: uppercase;
-    color: #000000;
-    font-family: sans-bold;
-    font-size: 16px;
-    font-weight: 900;
-  }
-
-  .news-info {
-    margin-bottom: 25px;
-    margin-top: 25px;
-  }
-
-  .news-date {
-    font-size: 10px;
-    color: #989898;
-    font-family: sans-bold;
-    font-weight: 700;
-  }
-
-  .news-autor {
-    font-size: 10px;
-    font-family: sans-bold;
-    font-weight: 900;
-    color: #000000;
-    margin-left: 10px;
-  }
-
-  .news-content {
-    font-family: sans-regular;
-    font-size: 13px;
-    font-weight: 500;
-    line-height: 1.5;
-  }
-  .news-contents {
-    font-family: sans-bold;
-    font-size: 13px;
-    font-weight: 500;
-    line-height: 1.5;
-    padding-bottom: 25px;
-  }
-  .news-content {
-    border-style: none none solid none;
-    border-width: 2px;
-    border-color: #eeeeee;
-    padding-top: 22px;
-    padding-bottom: 17px;
-    margin-bottom: 40px;
-  }
-
-  .aside {
-    width: 270px;
-    margin-left: 30px;
-  }
-}
-
-@media (max-width: 768px) {
-  .contents {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: auto;
-    width: 100%;
-    max-width: 330px;
-    margin-top: 60px;
-    padding-left: 10px;
-    padding-right: 30px;
-  }
-
-  .news-blog {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 100%;
-    max-width: 330px;
-  }
-
-  .posts {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 330px;
-  }
-  .preview-img {
-    max-width: 330px;
-  }
-  .news-preview {
-    display: flex;
-    justify-content: flex-start;
-    width: 310px;
-  }
-
-  content {
-    display: flex;
-    width: 330px;
-  }
-  .news-menu {
-    display: flex;
-    box-sizing: border-box;
-    list-style-type: none;
-    margin-top: 10px;
-  }
-
-  .tag-link {
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 14px;
-    color: #b59f5b;
-    font-weight: 700;
-    font-family: sans-bold;
-  }
-
-  .news-title {
-    margin-top: 5px;
-    line-height: 1.2;
-    font-size: 16px;
-    font-family: sans-bold;
-    font-weight: bold;
-  }
-
-  .news-title-link {
-    text-decoration: none;
-    text-transform: uppercase;
-    color: #000000;
-    font-family: sans-bold;
-    font-size: 16px;
-    font-weight: 900;
-  }
-
-  .news-info {
-    margin-bottom: 25px;
-    margin-top: 25px;
-  }
-
-  .news-date {
-    font-size: 12px;
-    color: #989898;
-    font-family: sans-bold;
-    font-weight: 700;
-  }
-
-  .news-autor {
-    font-size: 12px;
-    font-family: sans-bold;
-    font-weight: 900;
-    color: #000000;
-    margin-left: 10px;
-  }
-
-  .news-content {
-    font-family: sans-regular;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 1.5;
-  }
-  .news-content {
-    border-style: none none solid none;
-    border-width: 2px;
-    border-color: #eeeeee;
-    padding-top: 22px;
-    padding-bottom: 17px;
-    margin-bottom: 40px;
-  }
-  .news-contents {
-    font-family: sans-bold;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 1.5;
-  }
-  .news-contents {
-    border-style: none none solid none;
-    border-width: 2px;
-    border-color: #eeeeee;
-    padding-top: 22px;
-    padding-bottom: 17px;
-    margin-bottom: 40px;
-  }
-
-  .aside {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 100%;
-  }
-
-  .new-header {
-    text-align: center;
-    font-family: sans-bold;
-    font-size: 16px;
-    text-transform: uppercase;
-    font-weight: bold;
-  }
-
-  .date {
-    font-size: 12px;
-    color: #989898;
-    font-family: sans-regular;
-    font-weight: 700;
-    margin-bottom: 10px;
-  }
-
-  .new-name {
-    width: 240px;
-  }
-  .new-link {
-    text-transform: uppercase;
-    text-decoration: none;
-    color: #000000;
-    font-family: sans-bold;
-    font-size: 14px;
-  }
-
-  .search {
-    display: flex;
-    width: 100%;
-  }
-
-  .hidden {
-    width: 1px;
-    height: 1px;
-    clip: rect(1px 1px 1px 1px);
-    position: absolute;
-    overflow: hidden;
-  }
-
-  .field {
-    box-sizing: border-box;
-    border: none;
-    height: 48px;
-    width: 281px;
-    background-color: #f4f7f6;
-    font-size: 13px;
-  }
-  .mailing-field {
-    width: 100%;
-    border: none;
-    height: 48px;
-    background-color: #f4f7f6;
-    padding-left: 18px;
-    padding-right: 18px;
-    font-size: 13px;
-  }
-
-  .mailing-button {
-    width: 100%;
-    height: 48px;
-    margin-top: 18px;
-    border: none;
-    background-color: #b59f5b;
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: 12px;
-    color: #ffffff;
-    font-family: sans-bold;
-    cursor: pointer;
-  }
-  .new-tags {
-    width: 330px;
-  }
-  .subject {
-    display: block;
-    align-items: center;
-    align-content: space-between;
-    padding: 7px 15px;
-    text-decoration: none;
-    border-style: solid;
-    border-color: #eeeeee;
-    color: #000000;
-    text-transform: uppercase;
-    font-size: 12px;
-    font-family: sans-bold;
-    font-weight: 900;
-  }
-}
-.aside {
-  width: 270px;
-  margin-left: 35px;
 }
 
 .new-header {
@@ -745,23 +404,28 @@
   width: 100%;
 }
 
+.search-group {
+ flex-grow: 1;
+}
+
+
 .hidden {
   width: 1px;
   height: 1px;
   clip: rect(1px 1px 1px 1px);
   position: absolute;
-  overflow: hidden;
 }
 
 .field {
   box-sizing: border-box;
   border: none;
   height: 48px;
-  width: 223px;
+  width: 100%;
   background-color: #f4f7f6;
   padding-left: 18px;
   padding-right: 18px;
   font-size: 13px;
+  flex: 1 1 auto;
 }
 
 .search-button {
@@ -769,11 +433,15 @@
   height: 48px;
   border: none;
   background-color: #b59f5b;
-  background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/search.svg");
+  background-image: url(../svg/search.svg);
   background-repeat: no-repeat;
   background-size: 18px;
   background-position: center;
   cursor: pointer;
+}
+
+.search-button:hover{
+  background-color: black;
 }
 
 .mailing {
@@ -782,7 +450,7 @@
 
 .mailing-field {
   width: 100%;
-  border: none;
+  border:none;
   height: 48px;
   background-color: #f4f7f6;
   padding-left: 18px;
@@ -804,6 +472,10 @@
   cursor: pointer;
 }
 
+.mailing-button:hover {
+  background-color: black;
+}
+
 .tags {
   margin-bottom: 60px;
 }
@@ -815,7 +487,7 @@
 }
 
 .tag-subject {
-  margin-top: 26px;
+  padding-bottom: 10px;
   margin-right: 5px;
 }
 
@@ -831,119 +503,194 @@
   text-transform: uppercase;
   font-size: 11px;
   font-family: sans-bold;
-  font-weight: 900;
+  font-weight: 700;
 }
 
-.new-theme {
-  list-style-type: none;
-}
-
-.theme-subject {
-  border-style: none none solid none;
-  border-width: 1px;
-  border-color: #eeeeee;
-  padding-top: 22px;
-  padding-bottom: 17px;
-}
-
-.theme {
-  text-decoration: none;
-  color: #000000;
-  font-family: sans-bold;
-  font-size: 14px;
-  font-weight: bold;
-}
-
-.number {
-  display: inline-block;
-  font-family: sans-bold;
-  color: #b59f5b;
-  font-size: 11px;
-  vertical-align: top;
-}
-
-.footer {
-  display: flex;
-  justify-content: center;
-}
-.footer-social {
-  display: flex;
-  justify-content: center;
-  width: 1170px;
-  background-color: #f4f7f6;
-  margin-bottom: 74px;
-  margin-top: 65px;
-  padding: 32px 27px;
-}
-
-@media (min-width: 769px) and (max-width: 1200px) {
-  .footer {
-    display: flex;
-    justify-content: center;
+  .new-theme {
+    list-style-type: none;
   }
-  .footer-social {
+
+  .theme-subject {
+    border-style: none none solid none;
+    border-width: 1px;
+    border-color: #eeeeee;
+    padding-top: 20px;
+    padding-bottom: 17px;
+  }
+
+ .theme {
+    text-decoration: none;
+    color: #000000;
+    font-family: sans-bold;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .theme:hover {
+    color:#b59f5b;
+  }
+
+ .number {
+    display: inline-block;
+    font-family: sans-bold;
+    color: #b59f5b;
+    font-size: 11px;
+    vertical-align: top;
+    font-weight: 700;
+  }
+
+  .products {
+    margin-top: 40px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-family: sans-bold;
+    text-align: center;
+  }
+  
+  .products::after {
+    content: "";
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    width: 66px;
+    height: 3px;
+    background: #e1d9bd;
+  }
+  
+  .product-container {
+    max-width: 1200px;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 60px;
     display: flex;
-    justify-content: center;
-    width: 697px;
+    justify-content: space-between;
+  }
+  
+  .product {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .product-picture {
+    text-align: center;
+  }
+  
+  .content-product {
+    height: 100%;
+    margin-top: -35px;
+    padding: 50px 25px 25px;
+    border: 3px solid #e1d9bd;
+    line-height: 1.5;
+    position: relative;
+  }
+  
+  .header-product {
+    text-transform: uppercase;
+    font-family: sans-bold;
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  .product-text {
+    font-family: sans-regular;
+    font-size: 14px;
+  }
+  
+  .product-link {
+    text-decoration: none;
+    color: #b59f5b;
+  }
+  
+  .footer-product {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .product-price {
+    font-family: sans-bold;
+    font-weight: bold;
+    display: flex;
+  }
+  
+  .product-price-value {
+    font-size: 18px;
+  }
+  
+  .product-price-old {
+    text-decoration: line-through;
+    font-size: 14px;
+  }
+
+  .product-button {
+    width: 140px;
+    height: 50px;
+    text-transform: uppercase;
+    font-family: sans-bold;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #b59f5b;
+    border: none;
+    cursor: pointer;
+  }
+
+  .product-button:hover {
+    background-color: black;
+  }
+
+ .footer-social {
+    max-width: 1200px;
     background-color: #f4f7f6;
-    margin-bottom: 49px;
-    padding: 32px 27px;
+    margin: 0 auto;
+    margin-bottom: 74px;
   }
-}
 
-@media (max-width: 768px) {
-  .footer {
-    display: flex;
+  .social-network {
+    margin-bottom: 40px;
+  }
+
+ .social {
+   list-style-type: none;
+   display: flex;
     justify-content: center;
+    padding: 32px 0;
   }
-  .footer-social {
-    display: flex;
-    justify-content: center;
-    width: 329px;
-    background-color: #f4f7f6;
-    margin-bottom: 49px;
-    padding: 32px 27px;
-  }
-}
-
-.social-network {
-  margin-bottom: 40px;
-}
-
-.social {
-  list-style-type: none;
-  display: flex;
-  justify-content: center;
-}
 
 .social-icon {
   display: block;
   width: 25px;
-  min-height: 25px;
-  margin: 0 15px;
+  height: 25px;
   background-repeat: no-repeat;
   background-size: 20px;
   background-position: center;
 }
 
+.social-link:not(:last-child) {
+  margin-right: 13px;
+}
 .social-icon_twitter {
-  background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/social/004-twitter.svg");
+  background-image: url(../svg/004-twitter.svg);
 }
 
 .social-icon_pinterest {
-  background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/social/001-pinterest.svg");
+  background-image: url(../svg/001-pinterest.svg);
 }
 
 .social-icon_facebook {
-  background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/social/002-facebook-logo.svg");
+  background-image: url(../svg/002-facebook-logo.svg);
 }
 
 .social-icon_instagram {
-  background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/social/005-instagram.svg");
+  background-image: url(../svg/005-instagram.svg);
 }
 
 .social-icon_tumblr {
-  background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/social/003-tumblr.svg");
+  background-image: url(../svg/003-tumblr.svg);
 }
 
 .network {
@@ -954,783 +701,22 @@
 }
 
 .copyright {
-  width: 220px;
-  margin-left: 475px;
   text-decoration: none;
   color: #999999;
   font-size: 11px;
   font-family: sans-bold;
-}
-@media (min-width: 769px) and (max-width: 1200px) {
-  .copyright {
-    width: 220px;
-    margin-left: 245px;
-    text-decoration: none;
-    color: #999999;
-    font-size: 11px;
-    font-family: sans-bold;
-  }
-}
-@media (max-width: 768px) {
-  .copyright {
-    width: 220px;
-    margin-left: 60px;
-    text-decoration: none;
-    color: #999999;
-    font-size: 11px;
-    font-family: sans-bold;
-  }
-}
-.actual-new-header {
-  text-align: center;
-  font-family: sans-bold;
-  font-size: 15px;
-  text-transform: uppercase;
-  font-weight: 900;
-  margin-top: 65px;
+  font-weight: bold;
 }
 
-.actual-new-header::after {
-  content: "";
-  display: block;
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 15px;
-  margin-bottom: 30px;
-  width: 66px;
-  min-height: 3px;
-  background: #e1d9bd;
+.copyright-text{
+ text-align: center;
 }
 
-.actual-news {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
+.popup-container{
+ margin-top: auto;
+ margin-bottom: auto;
 }
 
-.card-trend1 {
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  width: 24.5%;
-  min-height: 320px;
-  margin-right: 0.66%;
-  padding: 15px;
-  background-image: url("https://raw.githubusercontent.com/netology-code/mq-diploma/master/sources/img/trend1.jpg");
-  background-color: #000000;
-  background-size: cover;
-  position: relative;
-  background-repeat: no-repeat;
-  background-position: center center;
-  z-index: 0;
-}
-.card-trend1::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #000000;
-  opacity: 0.5;
-  z-index: -1;
-}
-
-.card-new {
-  border: 3px solid #8e8254;
-  padding: 35px;
-  width: 100%;
-}
-
-.actual-news-title {
-  display: flex;
-  box-sizing: border-box;
-  list-style-type: none;
-  margin-bottom: 12px;
-}
-
-.content-block-list:nth-child(2n) {
-  margin-left: 10px;
-}
-
-.actual-content {
-  text-decoration: none;
-  text-transform: uppercase;
-  color: #ffffff;
-  font-family: open-sans;
-  font-size: 16px;
-  font-weight: 900;
-}
-.card-trend2 {
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  width: 24.5%;
-  margin-right: 0.66%;
-  min-height: 320px;
-  padding: 15px;
-  background-image: url("https://raw.githubusercontent.com/netology-code/mq-diploma/master/sources/img/trend2.jpg");
-  background-color: #000000;
-  background-size: cover;
-  position: relative;
-  background-repeat: no-repeat;
-  background-position: center center;
-  z-index: 0;
-}
-.card-trend2::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #000000;
-  opacity: 0.5;
-  z-index: -1;
-}
-
-.card-trend3 {
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  width: 24.5%;
-  margin-right: 0.66%;
-  min-height: 320px;
-  padding: 15px;
-  background-image: url("https://raw.githubusercontent.com/netology-code/mq-diploma/master/sources/img/trend3.jpg");
-  background-color: #000000;
-  background-size: cover;
-  position: relative;
-  background-repeat: no-repeat;
-  background-position: center center;
-  z-index: 0;
-}
-.card-trend3::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #000000;
-  opacity: 0.5;
-  z-index: -1;
-}
-.card-trend4 {
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  width: 24.5%;
-  min-height: 320px;
-  padding: 15px;
-  background-image: url("https://raw.githubusercontent.com/netology-code/mq-diploma/master/sources/img/trend4.jpg");
-  background-color: #000000;
-  background-size: cover;
-  position: relative;
-  background-repeat: no-repeat;
-  background-position: center center;
-  z-index: 0;
-}
-.card-trend4::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #000000;
-  opacity: 0.5;
-  z-index: -1;
-}
-
-.actual-news {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-@media (min-width: 769px) and (max-width: 1200px) {
-  .card-trend1 {
-    display: flex;
-    justify-content: center;
-    width: 49.3%;
-    margin-right: 0.7%;
-    min-height: 245px;
-    padding: 15px;
-    background-image: url("https://raw.githubusercontent.com/netology-code/mq-diploma/master/sources/img/trend1.jpg");
-    background-color: #000000;
-    background-size: cover;
-    position: relative;
-    background-repeat: no-repeat;
-    background-position: center center;
-    z-index: 0;
-  }
-  .card-trend1::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #000000;
-    opacity: 0.5;
-    z-index: -1;
-  }
-
-  .card-trend2 {
-    display: flex;
-    justify-content: center;
-    width: 49.3%;
-    min-height: 245px;
-    padding: 15px;
-    background-image: url("https://raw.githubusercontent.com/netology-code/mq-diploma/master/sources/img/trend2.jpg");
-    background-color: #000000;
-    background-size: cover;
-    position: relative;
-    background-repeat: no-repeat;
-    background-position: center center;
-    z-index: 0;
-  }
-  .card-trend2::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #000000;
-    opacity: 0.5;
-    z-index: -1;
-  }
-
-  .card-trend3 {
-    display: flex;
-    justify-content: center;
-    width: 49.3%;
-    margin-right: 0.7%;
-    margin-top: 0.4%;
-    min-height: 245px;
-    padding: 15px;
-    background-image: url("https://raw.githubusercontent.com/netology-code/mq-diploma/master/sources/img/trend3.jpg");
-    background-color: #000000;
-    background-size: cover;
-    position: relative;
-    background-repeat: no-repeat;
-    background-position: center center;
-    z-index: 0;
-  }
-  .card-trend3::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #000000;
-    opacity: 0.5;
-    z-index: -1;
-  }
-
-  .card-trend4 {
-    display: flex;
-    justify-content: center;
-    width: 49.3%;
-    margin-top: 0.4%;
-    min-height: 245px;
-    padding: 15px;
-    background-image: url("https://raw.githubusercontent.com/netology-code/mq-diploma/master/sources/img/trend4.jpg");
-    background-color: #000000;
-    background-size: cover;
-    position: relative;
-    background-repeat: no-repeat;
-    background-position: center center;
-    z-index: 0;
-  }
-  .card-trend4::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #000000;
-    opacity: 0.5;
-    z-index: -1;
-  }
-
-  .card-new {
-    border: 3px solid #8e8254;
-    padding: 35px;
-    width: 100%;
-  }
-}
-@media (max-width: 768px) {
-  .card-trend1 {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    min-height: 245px;
-    padding: 15px;
-    background-image: url("https://raw.githubusercontent.com/netology-code/mq-diploma/master/sources/img/trend1.jpg");
-    background-color: #000000;
-    background-size: cover;
-    position: relative;
-    background-repeat: no-repeat;
-    background-position: center center;
-    z-index: 0;
-  }
-  .card-trend1::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #000000;
-    opacity: 0.5;
-    z-index: -1;
-  }
-
-  .card-trend2 {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-top: 1%;
-    min-height: 245px;
-    padding: 15px;
-    background-image: url("https://raw.githubusercontent.com/netology-code/mq-diploma/master/sources/img/trend2.jpg");
-    background-color: #000000;
-    background-size: cover;
-    position: relative;
-    background-repeat: no-repeat;
-    background-position: center center;
-    z-index: 0;
-  }
-  .card-trend2::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #000000;
-    opacity: 0.5;
-    z-index: -1;
-  }
-
-  .card-trend3 {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-top: 1%;
-    min-height: 245px;
-    padding: 15px;
-    background-image: url("https://raw.githubusercontent.com/netology-code/mq-diploma/master/sources/img/trend3.jpg");
-    background-color: #000000;
-    background-size: cover;
-    position: relative;
-    background-repeat: no-repeat;
-    background-position: center center;
-    z-index: 0;
-  }
-  .card-trend3::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #000000;
-    opacity: 0.5;
-    z-index: -1;
-  }
-
-  .card-trend4 {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-top: 1%;
-    min-height: 245px;
-    padding: 15px;
-    background-image: url("https://raw.githubusercontent.com/netology-code/mq-diploma/master/sources/img/trend4.jpg");
-    background-color: #000000;
-    background-size: cover;
-    position: relative;
-    background-repeat: no-repeat;
-    background-position: center center;
-    z-index: 0;
-  }
-  .card-trend4::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #000000;
-    opacity: 0.5;
-    z-index: -1;
-  }
-
-  .card-new {
-    border: 3px solid #8e8254;
-    padding: 14px;
-    width: 100%;
-  }
-}
-
-.product {
-  text-align: center;
-  font-family: sans-bold;
-  font-size: 15px;
-  text-transform: uppercase;
-  font-weight: 900;
-  margin-top: 65px;
-}
-.product::after {
-  content: "";
-  display: block;
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 15px;
-  margin-bottom: 30px;
-  width: 66px;
-  min-height: 3px;
-  background: #e1d9bd;
-}
-.products {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  flex-wrap: wrap;
-}
-.conteiner-product {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-.conteiner-products {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  max-width: 350px;
-  width: 100%;
-}
-.conteiner-products:nth-child(even) {
-  margin-left: 5%;
-  margin-right: 5%;
-}
-.conteiner-product-pillow {
-  display: flex;
-  max-width: 300px;
-  min-height: 205px;
-}
-.card-pillow {
-  display: flex;
-  flex-grow: 1;
-  width: 350px;
-  min-height: 275px;
-  border: 3px solid #d3c59d;
-  margin-top: -30px;
-}
-
-.title-description {
-  font-family: sans-bold;
-  font-size: 20px;
-  text-transform: uppercase;
-  font-weight: 900;
-  padding-top: 40px;
-  padding-left: 20px;
-}
-.description-contents {
-  padding-top: 18px;
-  padding-left: 20px;
-  font-size: 15px;
-  font-family: sans-regular;
-  color: #0f0d0e;
-  width: 300px;
-}
-.description-content {
-  text-decoration: none;
-  font-family: sans-regular;
-  font-size: 15px;
-  color: #cabb92;
-}
-.price-store {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.price-pillow {
-  padding-left: 20px;
-  padding-top: 35px;
-  line-height: 1;
-}
-.old-price {
-  font-size: 14px;
-  font-family: sans-bold;
-  font-weight: 900;
-  text-decoration: line-through;
-}
-
-.new-price {
-  font-size: 20px;
-  font-family: sans-bold;
-  font-weight: 900;
-}
-
-.to-the-store {
-  min-width: 130px;
-  height: 45px;
-  margin-top: 25px;
-  margin-left: 110px;
-  border: none;
-  background-color: #b59f5b;
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 12px;
-  color: #ffffff;
-  font-family: sans-regular;
-  cursor: pointer;
-  margin-bottom: 30px;
-}
-
-.conteiner-product-doll {
-  display: flex;
-  max-width: 300px;
-  min-height: 205px;
-}
-
-.conteiner-product-frame {
-  display: flex;
-  max-width: 300px;
-  min-height: 205px;
-}
-
-@media (min-width: 769px) and (max-width: 1200px) {
-  .products {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: auto;
-    width: 100%;
-    max-width: 750px;
-  }
-  .conteiner-product {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    max-width: 750px;
-  }
-  .conteiner-products {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    max-width: 330px;
-    width: 100%;
-  }
-
-  .conteiner-product-pillow {
-    display: flex;
-    max-width: 290px;
-    min-height: 225px;
-  }
-  .card-pillow {
-    display: flex;
-    flex-grow: 1;
-    width: 335px;
-    height: 260px;
-    border: 3px solid #d3c59d;
-    margin-top: -40px;
-  }
-
-  .title-description {
-    font-family: sans-bold;
-    font-size: 20px;
-    text-transform: uppercase;
-    font-weight: 900;
-    padding-top: 40px;
-    padding-left: 20px;
-  }
-  .description-contents {
-    padding-top: 18px;
-    padding-left: 20px;
-    font-size: 15px;
-    font-family: sans-regular;
-    color: #0f0d0e;
-    width: 300px;
-  }
-  .description-content {
-    text-decoration: none;
-    font-family: sans-regular;
-    font-size: 15px;
-    color: #cabb92;
-  }
-  .price-store {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .price-pillow {
-    padding-left: 20px;
-    padding-top: 35px;
-    line-height: 1;
-  }
-  .old-price {
-    font-size: 14px;
-    font-family: sans-bold;
-    font-weight: 900;
-    text-decoration: line-through;
-  }
-
-  .new-price {
-    font-size: 20px;
-    font-family: sans-bold;
-    font-weight: 900;
-  }
-
-  .to-the-store {
-    min-width: 130px;
-    height: 45px;
-    margin-top: 25px;
-    margin-left: 110px;
-    border: none;
-    background-color: #b59f5b;
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: 12px;
-    color: #ffffff;
-    font-family: sans-regular;
-    cursor: pointer;
-    margin-bottom: 30px;
-  }
-  .conteiner-product-doll {
-    display: flex;
-    max-width: 290px;
-    min-height: 225px;
-  }
-
-  .conteiner-product-frame {
-    display: flex;
-    max-width: 290px;
-    min-height: 225px;
-    margin-top: 30px;
-  }
-}
-@media (max-width: 768px) {
-  .products {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-  }
-  .conteiner-product {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    max-width: 330px;
-  }
-  .conteiner-products {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    max-width: 330px;
-    width: 100%;
-  }
-
-  .conteiner-product-pillow {
-    display: flex;
-    max-width: 285px;
-    min-height: 280px;
-  }
-  .card-pillow {
-    display: flex;
-    flex-grow: 1;
-    width: 330px;
-    height: 220px;
-    border: 3px solid #d3c59d;
-    margin-top: -40px;
-  }
-
-  .title-description {
-    font-family: sans-bold;
-    font-size: 20px;
-    text-transform: uppercase;
-    font-weight: 900;
-    padding-top: 40px;
-    padding-left: 20px;
-  }
-  .description-contents {
-    padding-top: 18px;
-    padding-left: 20px;
-    font-size: 15px;
-    font-family: sans-regular;
-    color: #0f0d0e;
-    width: 300px;
-  }
-  .description-content {
-    text-decoration: none;
-    font-family: sans-regular;
-    font-size: 15px;
-    color: #cabb92;
-  }
-  .price-store {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .price-pillow {
-    padding-left: 20px;
-    padding-top: 35px;
-    line-height: 1;
-  }
-  .old-price {
-    font-size: 14px;
-    font-family: sans-bold;
-    font-weight: 900;
-    text-decoration: line-through;
-  }
-
-  .new-price {
-    font-size: 20px;
-    font-family: sans-bold;
-    font-weight: 900;
-  }
-
-  .to-the-store {
-    min-width: 140px;
-    height: 45px;
-    margin-top: 25px;
-    margin-left: 85px;
-    border: none;
-    background-color: #b59f5b;
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: 14px;
-    color: #ffffff;
-    font-family: sans-regular;
-    cursor: pointer;
-    margin-bottom: 30px;
-  }
-  .conteiner-product-doll {
-    display: flex;
-    max-width: 285px;
-    min-height: 280px;
-    margin-top: 30px;
-  }
-
-  .conteiner-product-frame {
-    display: flex;
-    max-width: 285px;
-    min-height: 280px;
-    margin-top: 30px;
-  }
-}
-
-.popup-container {
-  margin-top: auto;
-  margin-bottom: auto;
-}
 .title-popup {
   text-transform: uppercase;
   font-size: 18px;
@@ -1750,17 +736,19 @@
   height: 3px;
   background: #e1d9bd;
 }
+
 .popup_hidden {
-  display: flex;
-  display: none;
-  justify-content: center;
-  position: fixed;
-  z-index: 9999;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+ display: flex; 
+ display: none;
+ justify-content: center;
+ position: fixed;
+ z-index: 9999;
+ top:0;
+ right:0;
+ bottom:0;
+ left:0;
 }
+
 .popup_hidden:after {
   content: "";
   position: absolute;
@@ -1800,7 +788,7 @@
   width: 100%;
   appearance: none;
   background-color: #f4f7f6;
-  background-image: url("https://raw.githubusercontent.com/netology-code/mq-diploma/1ad0703d75efaafe9fb70e8a32f7ecf69bfb40f4/sources/svg/form-arrows.svg");
+  background-image: url(../svg/form-arrows.svg);
   background-repeat: no-repeat;
   background-size: 10px;
   background-position: right 10px center;
@@ -1810,7 +798,11 @@
   color: #989898;
 }
 
-.form-radio-group {
+.select:focus {
+  outline: 2px double #e1d9bd;
+}
+
+.form-radio-group{
   display: flex;
   flex-wrap: wrap;
 }
@@ -1820,32 +812,34 @@
   margin-top: 5px;
 }
 
-.radio-group > input {
+
+.radio-group>input {
   position: absolute;
   z-index: -1;
   opacity: 0;
 }
 
-.radio-group > span {
+
+.radio-group>span {
   display: inline-flex;
   align-items: center;
-}
+} 
 
-.radio-group > span::before {
-  content: "";
+.radio-group>span::before {
+  content: '';
   display: inline-block;
   width: 1em;
   height: 1em;
   border-radius: 50%;
   margin-right: 0.5em;
-  background-image: url("https://raw.githubusercontent.com/netology-code/mq-diploma/1ad0703d75efaafe9fb70e8a32f7ecf69bfb40f4/sources/svg/form-empty-circle.svg");
+  background-image: url(../svg/form-empty-circle.svg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 100%;
 }
 
-.radio-group > input:checked + span::before {
-  background-image: url("https://raw.githubusercontent.com/netology-code/mq-diploma/1ad0703d75efaafe9fb70e8a32f7ecf69bfb40f4/sources/svg/form-circle.svg");
+.radio-group>input:checked+span::before {
+  background-image: url(../svg/form-circle.svg);
 }
 
 .field-textarea {
@@ -1855,7 +849,7 @@
   resize: none;
   outline: none;
   border: none;
-  background-color: #f4f7f6;
+  background-color:#f4f7f6;
   padding-left: 18px;
   padding-right: 18px;
   font-size: 15px;
@@ -1865,6 +859,10 @@
   padding-top: 25px;
 }
 
+.field-textarea:focus {
+  outline: 2px double #e1d9bd;
+}
+
 .button {
   width: 100%;
   height: 45px;
@@ -1872,19 +870,280 @@
   background-color: #b59f5b;
   text-transform: uppercase;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 12px;
   color: #ffffff;
   font-family: sans-bold;
   cursor: pointer;
 }
 
-.button-close {
-  background-image: url("https://raw.githubusercontent.com/netology-code/mq-diploma/1ad0703d75efaafe9fb70e8a32f7ecf69bfb40f4/sources/svg/form-x.svg");
+.button:hover {
+  background: rgba(0,0,0,0);
+  color: #b59f5b;
+  box-shadow: inset 0 0 0 3px #b59f5b;
+}
+
+.button-close{
+  background-image: url(../svg/form-x.svg);
   background-repeat: no-repeat;
   background-color: transparent;
   margin-left: 95%;
-  border: none;
+  border:none;
   width: 15px;
   height: 20px;
   cursor: pointer;
+}
+
+
+@media (min-width: 1200px){
+  .product {
+    width: 30%;
+  }
+  
+  .menu-button {
+    display: none;
+  }
+
+  .trend {
+    width: 24.8%;
+    min-height: 320px;
+  }
+
+  .trend:nth-child(-n + 3) {
+    margin-right: 3px;
+  }
+
+  .contents {
+    margin-top: 60px;
+  }
+
+  .aside {
+    max-width: 270px;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1199px) and (orientation: landscape) {
+  .trend{
+    width: 24.8%;
+  }
+
+}
+
+@media (min-width: 641px) and (max-width: 1199px)  {
+  
+  .header {
+    background-image: url(../images/banner-bg-tablet.jpg);
+  }
+
+  .container-block{
+    justify-content: space-between;
+  }
+
+  .trend:nth-child(odd) {
+    margin-right: 3px;
+  }
+
+  .trend {
+    width: 49.7%;
+    margin-bottom: 3px;
+  }
+
+  .menu {
+    justify-content: space-between;
+  }
+
+  .logo {
+  margin-left: 35px;
+  }
+
+  .menu-list {
+    display: none;
+  }
+
+  .header-title {
+    max-width: 600px;
+    margin-top: 100px;
+  }
+  
+  .product-container {
+    flex-wrap: wrap;
+    max-width: 768px;
+  }
+
+  .product {
+    width: 45%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    margin-bottom: 10px;
+  }
+
+  .product:nth-child(3){
+    margin-top: 30px;
+  }
+
+  .contents{
+   justify-content: space-between;
+   max-width: 768px;
+  }
+  
+  .news-blog {
+    width: 50%;
+  }
+  
+  .posts {
+    flex-wrap: wrap;
+  }
+
+  .posts:not(:last-child) {
+    border-style: none none solid none;
+    border-width: 3px;
+    border-color: #eeeeee;
+    padding-bottom: 17px;
+  }
+
+  .aside {
+    width: 45%;
+  }
+
+  .footer-social {
+    max-width: 768px;
+  }
+}
+
+@media (max-width: 640px) and (orientation: landscape) {
+  .container-block{
+    justify-content: space-between;
+  }
+
+  .trend {
+    width: 49.7%;
+    margin-bottom: 3px;
+  }
+}
+
+@media (max-width: 640px) {
+  .header {
+    background-image: url(../images/banner-mobile.jpg);
+  }
+
+  .menu{
+    flex-direction: column-reverse; 
+  }
+
+  .header-menu {
+    align-self: flex-end;
+  }
+
+  .menu-list {
+    display: none;
+  }
+
+  .logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 90px;
+  }
+
+  .logo-img {
+    min-width: 272px;
+    height: 50px;
+  }
+
+  .header-title {
+    font-size: 20px;
+    max-width: 275px;
+    margin-top: 45px;
+  }
+
+  .trend {
+   width: 100%;
+   margin: 0 0 3px;
+  } 
+  
+  .contents{
+    justify-content: center;
+    max-width: 360px;
+    flex-wrap: wrap;
+    margin-top: 45px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .news-blog {
+    width: 100%;
+  }
+  
+  .posts {
+   width: 100%;
+   flex-wrap: wrap;
+  }
+
+  .posts:not(:last-child) {
+    border-style: none none solid none;
+    border-width: 3px;
+    border-color: #eeeeee;
+    padding-bottom: 17px;
+  }
+
+  .news-preview {
+   width: 330px;
+  }
+
+
+  .aside {
+    max-width: 330px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  .product-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 360px;
+  }
+
+  .product {
+    width: 100%;
+    display: flex;
+    margin-left: 5%;
+    margin-top: 30px;
+    margin-right: 5%;
+  }
+  
+  .footer-social {
+    max-width: 360px;
+  }
+
+  .title-popup {
+    font-size: 13px;
+  } 
+
+  .popup-contant {
+    width: 330px;
+    font-size: 11px;
+  }
+
+  .select {
+    font-size: 11px;
+  }
+
+  .field-textarea {
+    font-size: 11px;
+  }
+  
+  .button {
+    height: 45px;
+    font-size: 11px;
+  }
+  
+  .button-close{
+    margin-left: 90%;
+    width: 35px;
+    height: 35px;
+  }
 }
